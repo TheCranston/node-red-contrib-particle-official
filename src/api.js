@@ -2,6 +2,13 @@
 
 const Particle = require('particle-api-js');
 
+process.on('uncaughtException', function(err) {
+
+	// Handle the error safely
+	console.log(err)
+})
+
+
 module.exports = class Api {
 	/**
 	 * API wrapper constructor
